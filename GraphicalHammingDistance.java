@@ -1,3 +1,4 @@
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -66,6 +67,13 @@ public class GraphicalHammingDistance extends JFrame
 	    return new DefaultComboBoxModel<>(comboBoxModel);
 	}
 	
+	
+
+	
+	public static void main(String[] args)
+	{
+		
+	}
 	
 	
 }
