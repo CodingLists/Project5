@@ -55,6 +55,18 @@ public class GraphicalHammingDistance extends JFrame
 	private Rectangle distancebox4;
 	
 	
+	private DefaultComboBoxModel<String> getComboBoxModel(List<String> meso)
+	{
+		ArrayList<String> displayNames = new ArrayList<String>();
+		for (String station : meso)
+		{
+			displayNames.add(station);
+		}
+		String[] comboBoxModel = displayNames.toArray(new String[displayNames.size()]);
+	    return new DefaultComboBoxModel<>(comboBoxModel);
+	}
+	
+	
 	
 }
 
