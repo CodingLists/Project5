@@ -67,6 +67,10 @@ public class GraphicalHammingDistance extends JFrame
 	    return new DefaultComboBoxModel<>(comboBoxModel);
 	}
 	
+	public GraphicalHammingDistance()
+	{
+		
+	}
 	
 
 	
