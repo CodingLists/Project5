@@ -27,11 +27,17 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileSystemView;
 
+import java.io.IOException;
+
 
 
 
 public class GraphicalHammingDistance extends JFrame
 {
+	
+	ArrayList<String> stations;
+	
+	
 	private JPanel top = new JPanel();
 	private JPanel buttonmiddle = new JPanel();
 	private JPanel textmiddle = new JPanel();
@@ -78,9 +84,12 @@ public class GraphicalHammingDistance extends JFrame
 	    return new DefaultComboBoxModel<>(comboBoxModel);
 	}
 	
-	public GraphicalHammingDistance()
+	public GraphicalHammingDistance() throws IOException
 	{
 		super("Graphical Hamming Distance");
+		
+		
+		stations = Mesonet.readFile();
 		
 		this.setSize(911, 1069);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -168,8 +177,10 @@ public class GraphicalHammingDistance extends JFrame
 		distance2.setVisible(true);
 		distance3.setVisible(true);
 		distance4.setVisible(true);
+
 		
 		
+	
 		addStation = new JButton("Add Station");
 		
 	
@@ -185,6 +196,9 @@ public class GraphicalHammingDistance extends JFrame
 		distancebox4 = new JTextField();
 		distancebox4.setEditable(false);
 		addStationBox = new JTextField();
+		
+		
+		
 	
 		
 		
@@ -211,7 +225,7 @@ public class GraphicalHammingDistance extends JFrame
 	
 
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
 		new GraphicalHammingDistance();
 	}
