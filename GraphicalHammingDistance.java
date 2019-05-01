@@ -1,7 +1,10 @@
+import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.io.File;
@@ -27,7 +30,9 @@ import javax.swing.filechooser.FileSystemView;
 
 public class GraphicalHammingDistance extends JFrame
 {
-	
+	private JPanel top;
+	private JPanel middle;
+	private JPanel bottom;
 	
 	private JLabel hammingDistanceInfo;
 	private JLabel distance0;
@@ -70,13 +75,26 @@ public class GraphicalHammingDistance extends JFrame
 	public GraphicalHammingDistance()
 	{
 		
+		super("Graphical Hamming Distance");
+      
+        
+		top.setVisible(true);
+		middle.setVisible(true);
+		bottom.setVisible(true);
+		
+		this.add(top);
+		this.add(middle);
+		this.add(bottom);
+        
+	
+		
 	}
 	
 
 	
 	public static void main(String[] args)
 	{
-		
+		new GraphicalHammingDistance();
 	}
 	
 	
